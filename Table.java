@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+﻿import java.util.ArrayList;
 
 public class Table {
 	public static final int MAXPLAYER = 4;
@@ -129,7 +129,7 @@ public class Table {
 				Player[i].increaseChips(pos_betArray[i]);
 				System.out.print(", Get " + pos_betArray[i] + " Chips,the Chips now is: ");
 			}
-			else if(Player[i].getTotalValue() > Dealer.getTotalValue() && Dealer.getTotalValue() <= 21) {  //雙方皆小於等於21，但玩家點數小於莊家
+			else if(Player[i].getTotalValue() < Dealer.getTotalValue() && Dealer.getTotalValue() <= 21) {  //雙方皆小於等於21，但玩家點數小於莊家
 				Player[i].increaseChips(-pos_betArray[i]);
 				System.out.println(", Loss " + pos_betArray[i] + " Chips,the Chips now is: ");
 			}
